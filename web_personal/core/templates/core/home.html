@@ -1,0 +1,28 @@
+
+
+{% extends 'core/base.html' %}
+
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block header_img %}
+{% load static %}
+url('{% static 'core/img/home-bg.jpg'%}')
+
+{% endblock header_img %}
+    
+{% block text_on_image_header %}
+<h1>Portada</h1>
+{% endblock text_on_image_header %} 
+
+{% block  content %}
+
+<h2>Portada</h2>
+<div>
+    Esta será la portada de mi Web Personal
+</div>
+
+{% endblock content%}

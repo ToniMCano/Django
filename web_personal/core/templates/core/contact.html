@@ -2,6 +2,13 @@
 
 {% extends 'core/base.html' %}
 
+{% block header_img %}
+{% load static %}
+
+url('{% static 'core/img/contact-bg.jpg'%}')
+
+{% endblock header_img %}
+
 {% block title %}
     Contact
 {% endblock title %}
@@ -10,10 +17,17 @@
 <h1>Contacto</h1>
 {% endblock text_on_image_header %} 
 
-{% block content %}
 
-<h2>Contacto</h2>
-<div><b>Teléfono:</b>615492484</div><br>
-<div><b>Mail:</b><a href = 'mailto:toni.mrtnz.cn@gmail.com'>toni.mrtnz.cn@gmail.com</a></div>
-    
-{% endblock content %}
+
+{% block  content %}
+<div class="row"> 
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="img/avatar.jpg" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2>Contacto</h2>
+        <div><b>Teléfono:</b>615492484</div><br>
+        <div><b>Mail:</b><a href = 'mailto:toni.mrtnz.cn@gmail.com'>toni.mrtnz.cn@gmail.com</a></div>
+    </div>
+</div>
+{% endblock content%}

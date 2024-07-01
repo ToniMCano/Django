@@ -12,11 +12,6 @@ def about(request):
     return render(request , 'core/historia.html')
 
 
-def services(request):
-    
-    return render(request , 'core/servicios.html')
-
-
 def store(request):
     
     return render(request , 'core/store.html')

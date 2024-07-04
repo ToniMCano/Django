@@ -5,17 +5,12 @@ from django.shortcuts import render , HttpResponse
 
 def home(request):
     
-    return render(request ,'core/base.html')
+    return render(request ,'core/index.html')
 
 
 def about(request):
    
     return render(request ,'core/about.html')
-
-
-def blog(request):
-    
-    return render(request , 'core/blog.html')
 
 
 def store(request):

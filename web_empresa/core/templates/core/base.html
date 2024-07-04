@@ -54,7 +54,7 @@
             <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
-            <li class="nav-item {% if request.path == '/blog/' %}active{% endif %} px-lg-4">
+            <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %} px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
           </ul>
@@ -63,25 +63,7 @@
     </nav>
 
     <!-- Cabecera -->
-    <section class="page-section clearfix">
-      <div class="container">
-        <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/intro.jpg' %}" alt="">
-          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Déjate sorprender</span>
-              <span class="section-heading-lower">Te gustará</span>
-            </h2>
-            <p class="mb-3">Trabajamos sólo con los mejores ingredientes. Una vez lo pruebes, nuestro café será la mejor forma de empezar tu rutina diaria.
-            </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="store.html">Visítanos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+
     {% block content %}
       
     {% endblock content %}

@@ -1,10 +1,7 @@
-from django.shortcuts import render , HttpResponse
-from .models import Services
+from django.shortcuts import render
 
 # Create your views here.
 
 def services(request):
     
-    all_services = Services.objects.all()
-    
-    return render(request , 'services/services.html' , {'services' : all_services})
+    return render(request , 'services/services.html')

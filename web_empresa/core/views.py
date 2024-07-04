@@ -2,15 +2,14 @@ from django.shortcuts import render , HttpResponse
 
 # Create your views here.
 
-
 def home(request):
     
-    return render(request ,'core/base.html')
+    return render(request , "core/index.html")
 
 
 def about(request):
-   
-    return render(request ,'core/about.html')
+    
+    return render(request , 'core/about.html')
 
 
 def blog(request):
@@ -31,5 +30,3 @@ def contact(request):
 def sample(request):
     
     return render(request , 'core/sample.html')
-
-

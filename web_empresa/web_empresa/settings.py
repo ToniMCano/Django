@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(po=m2k=5rwx8yi+lc^t*qrhzhx1637an4j_h$w_0qr)&s1r7k'
+SECRET_KEY = 'django-insecure-vmfh-vu-!d8$o0x_1$n6x6a$m4qp+(7kb0odnimcwbsv2airrm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'services.apps.ServicesConfig',
+    'services',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +124,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # Carpeta Media
 
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
+
 MEDIA_ROOT = BASE_DIR / 'media'

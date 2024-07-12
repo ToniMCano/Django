@@ -1,5 +1,8 @@
 
 from core import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 """
 URL configuration for web_empresa project.
 
@@ -22,5 +25,9 @@ from django.urls import path , include
 urlpatterns = [
     path("" , include('core.urls')),
     path("services/" , include('services.urls')),
+    path("blog/" , include('blog.urls')),
+    path('page/' , include ('pages.urls')),
+    path("ckeditor5/", include('django_ckeditor_5.urls')) , 
+    path("contact/" , include('contact.urls')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,27 +1,21 @@
 from django.db import models
-from django_ckeditor_5.fields import CKEditor5Field
 
-# Create your models here.
+
 
 class Page(models.Model):
     
-    title = models.CharField(max_length = 250 , verbose_name = "Título")
-    content = CKEditor5Field('Text', config_name='extends' , default = "1")
-    order = models.SmallIntegerField(verbose_name = "Orden" , default = 0)
-    created = models.DateField(auto_now_add = True)
-    updated = models.DateField(auto_now = True)
-    
+    title = models.CharField(verbose_name = "Título", max_length=50)
+    content = models.TextField(verbose_name = "Contenido")
+    created = models.DateField(auto_now_add = True , verbose_name = 'Fecha de Creación')
+    updated = models.DateField(auto_now = True , verbose_name = 'Fecha de Actualización')
     
     class Meta:
         
         verbose_name = "página"
         verbose_name_plural = "páginas"
         
-        ordering = ['order' , 'title']
+        ordering = ["title"]
         
     def __str__(self):
         
         return self.title
-    
-    
-    

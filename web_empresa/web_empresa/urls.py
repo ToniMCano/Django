@@ -28,6 +28,6 @@ urlpatterns = [
     path("blog/" , include('blog.urls')),
     path('page/' , include ('pages.urls')),
     path("ckeditor5/", include('django_ckeditor_5.urls')) , 
-    path("contact/" , include('contact.urls')),
+    #path("contact/" , include('contact.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

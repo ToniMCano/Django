@@ -51,8 +51,8 @@
             <li class="nav-item {% if request.path == '/sample/' %}active{% endif %}  px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'services' %}">Visítanos</a>
             </li>
-            <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}  px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
+            <li class="nav-item {% if request.path == '/' %}active{% endif %}  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="">Contacto</a>
             </li>
             <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %}  px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
